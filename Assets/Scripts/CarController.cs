@@ -8,8 +8,10 @@ public class CarCOntroller : MonoBehaviour
 
     public float forwardAccel, reverseAccel, maxSpeed, turnStrength;
 
-    private float speedInput, turnInput; 
-    
+    private float speedInput, turnInput;
+
+
+
     // Start is called before the first frame update
 
     void Start()
@@ -36,6 +38,10 @@ public class CarCOntroller : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime, 0f ));
 
         transform.position = theRB.transform.position;
+
+ 
+    
+    
     }
 
     private void FixedUpdate()
@@ -46,13 +52,5 @@ public class CarCOntroller : MonoBehaviour
 
         }
     }
-
-
-
-
-
-
-
-
 
 }

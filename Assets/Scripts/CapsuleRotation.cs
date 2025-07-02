@@ -10,6 +10,7 @@ public class CapsuleRotation : MonoBehaviour
 
     private float turnInput;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +23,8 @@ public class CapsuleRotation : MonoBehaviour
         turnInput = -Input.GetAxis("Horizontal");
 
         var currentRot = (180 + transform.localEulerAngles.z) % 360 - 180;
-        Debug.Log("Euler:" + currentRot);
-        Debug.Log("Turninput:" + turnInput);
+       // Debug.Log("Euler:" + currentRot);
+       // Debug.Log("Turninput:" + turnInput);
 
         if (Mathf.Abs(currentRot) < 45f)
         {
