@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarCOntroller : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     public Rigidbody theRB;
 
@@ -52,5 +52,11 @@ public class CarCOntroller : MonoBehaviour
 
         }
     }
+
+    public void WillIchAusloesen()
+    { 
+       
+    }
+
 
 }

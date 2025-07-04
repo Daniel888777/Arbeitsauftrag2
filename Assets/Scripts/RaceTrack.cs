@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RaceTrack : MonoBehaviour
 {
+    [SerializeField] TrackTimer trackTimer;
+    
     private bool PassedStart, PassedCheckpoint, EndLap;
     // Start is called before the first frame update
 
@@ -21,6 +23,13 @@ public class RaceTrack : MonoBehaviour
         Debug.Log(Start);
         Debug.Log(Mid);
         Debug.Log(End);
+    
+        if (Start == true && End == false)
+            {
+            trackTimer.timeFunction();
+            }
+    
+    
     }
 
 
@@ -51,4 +60,4 @@ public class RaceTrack : MonoBehaviour
     }
 
 
-    }
+   }
