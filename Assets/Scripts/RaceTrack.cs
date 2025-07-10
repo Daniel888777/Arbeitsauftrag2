@@ -25,7 +25,7 @@ public class RaceTrack : MonoBehaviour
         //Debug.Log(Start);
         //Debug.Log(Mid);
        
-           Debug.Log(Lap);
+        //Debug.Log(Lap);
             switch (Lap)
             {
 
@@ -36,8 +36,11 @@ public class RaceTrack : MonoBehaviour
                 case 2:
                     trackTimer.timeFunctionLap2();
                     break;
-            case 3:
+                case 3:
                     trackTimer.timeFunctionLap3();
+                    break;
+                case 4:
+                trackTimer.finalTime();
                     break;
 
         }
@@ -58,12 +61,13 @@ public class RaceTrack : MonoBehaviour
         
         }else if (col.gameObject.CompareTag("StartLine") && PassedStart == true && PassedCheckpoint == true)
         {
-             Lap += 1;
+            Lap += 1;
+            PassedCheckpoint = false;
         }
 
             
             
-            if (col.gameObject.CompareTag("CheckLine") && PassedStart == true)
+        if (col.gameObject.CompareTag("CheckLine") && PassedStart == true)
         {
             PassedCheckpoint = true;
         }

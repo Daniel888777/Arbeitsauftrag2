@@ -14,12 +14,7 @@ public class Boost : MonoBehaviour
         if (col.gameObject.CompareTag("Player"))
         {
             var rb = col.GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.forward * boost, ForceMode.Impulse);
+            rb.AddForce(transform.forward * boost, ForceMode.Impulse);
         }
     }
-
-
-
-
-
 }

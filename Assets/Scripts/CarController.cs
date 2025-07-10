@@ -38,6 +38,7 @@ public class CarController : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, turnInput * turnStrength * Time.deltaTime, 0f ));
 
         transform.position = theRB.transform.position;
+        
 
  
     

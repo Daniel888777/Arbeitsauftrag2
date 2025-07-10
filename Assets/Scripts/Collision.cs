@@ -17,9 +17,4 @@ public class Collision : MonoBehaviour
             rb.AddForce(Vector3.up * jump, ForceMode.Impulse);
         }
     }
-
-
-
-
-
 }
